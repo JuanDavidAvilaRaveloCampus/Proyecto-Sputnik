@@ -1,25 +1,29 @@
 export default{
     title: [
         {
-            name: "Jhon Eduard Almeida",
+            name: "¿Por que sí?",
             href: "#"
         }
     ],
     company: [
         {
-            name: "Eduard",
+            name: "Home",
             href: "#"
         },
         {
-            name: "Almeida",
+            name: "Folders",
             href: "#"
         },
         {
-            name: "Hernandez",
+            name: "Music",
             href: "#"
         },
         {
-            name: "Jessenia",
+            name: "Relaxing",
+            href: "#"
+        },
+        {
+            name: "Meditation",
             href: "#"
         },
     ],

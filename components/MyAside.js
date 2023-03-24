@@ -8,7 +8,7 @@ export default {
             title : "archives",
             link : [
                 {
-                    name: "Abril 2",
+                    name: "Abril 3",
                     href: "#"
                 },
                 {
@@ -21,32 +21,22 @@ export default {
 
 
     showAside() {
-        const data = this.nav.map((val,id)=>{
-            return (
-                (val, link)
-                    ? this.list(val)
-                    : this.cards(val)
-            );
-        });
-        document.querySelector('#nav').insertAdjacentHTML('beforeend', data.join('<br>'))
+        this.nav.forEach((val,id)=>{
+            if(val.link){
+                this.list(val);
+            } else {
+                this.cards(val);
+            }
+        })
     },
-    cards(p1) {
-        return 
-        `<div class="pr- mb-r br-light rounder">
-            <h4 class="fas-italic">${p1-title}</h4>
-            <p class="mb-0">${p1.paragraph}</p>
-        </div>
-        `;
+    cards(val) {
+        document.querySelector('#card').insertAdjacentHTML('beforeend',`<h4 class="fst-italic">${val.title}</h4><br>
+        <p class="mb-0">${val.paragraph}</p><br>`)
     },
-    list(p1){
-        return `
-        <div class="p-4">
-            <h4 class= "fst-italic">${p1.title}</h4>
-            <ol class="list-unstyled mb-0">
-                ${p1.link.map(val, id=> `<li><a href="${val.href}">
-                ${val.name}</a></li>`).join("")}
-            </ol>
-        </div>
-        `;
-    }
+    list(val){
+        document.querySelector('aside').insertAdjacentHTML('beforeend', `<h4 class= "fst-italic">${val.title}</h4><br>
+        <ol class="list-unstyled mb-0">
+        ${val.link.mamp((val,id) => `<li><a href="${val.link}" target="_blank">${val.name}</a></li>`).join("")}
+        </ol><br>`)
+    },
 }

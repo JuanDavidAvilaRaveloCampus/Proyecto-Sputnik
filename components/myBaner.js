@@ -1,12 +1,9 @@
 export default{
-    imagen: "../imagen1.jpg",
-    showImage(){
-        document.querySelector(".Style-img").style.backgroundImage = `url(${this.imagen})`;
-    },
+    imagen: "../assets/img/images.squarespace-cdn.jpeg",
 
     TitleBanner: [
         {
-            title2: "La niña que domo el mundo",
+            title2: "Poema",
             name: "ddd",
             content: "ddd"
         }
@@ -14,14 +11,14 @@ export default{
 
     ContentBanner: [
         {
-            content: "Esta fue la niña que domo el mundo por medio de una fotografia muy polemica",
+            content: "Todos pensamos en algún momento que la poesia solo son palabras bonitas, pero creo, que hay algo más que eso...",
         }
     ],
 
     btn: [
         {
             name:"Continuar...",
-            href:"https://www.deepl.com/es/translator"
+            href:"https://music.apple.com/mx/artist/la-razon-de-todo/1470297098"
         }
     ],
 
@@ -39,6 +36,9 @@ export default{
                 plantilla += `<p class="ContentBanner my-3">${val.content}</p>`
             });
                 document.querySelector(".ContentBanner").insertAdjacentHTML("beforeend", plantilla);
+    },
+    showImage(){
+        document.querySelector(".Style-img").style.backgroundImage = `url(${this.imagen})`;
     },
 
     Button(){
