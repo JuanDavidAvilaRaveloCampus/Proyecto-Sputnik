@@ -67,8 +67,7 @@ export default {
                         <img src="${val.img}" class="img_book img-thumbnail">
                     </div>
                 </div>
-            </div>`
-        );
+            </div>`);
         })
     },
-};
+}
