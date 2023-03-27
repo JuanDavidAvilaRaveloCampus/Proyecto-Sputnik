@@ -27,18 +27,16 @@ export default {
             } else {
                 this.cards(val);
             }
-            console.log(val);
         })
     },
     cards(val) {
         document.querySelector('#card').insertAdjacentHTML('beforeend',`<h4 class="fst-italic">${val.title}</h4><br>
-        // ERROR EN EL VAL (NO LO DETECTA)
         <p class="mb-0">${val.paragraph}</p><br>`)
     },
     list(val){
         document.querySelector('#aside').insertAdjacentHTML('beforeend', `<h4 class= "fst-italic">${val.title}</h4><br>
         <ol class="list-unstyled mb-0">
-        ${val.link.map((val,id) => `<li><a href="${val.link}" target="_blank">${val.name}</a></li>`).join("")}
+        ${val.link.map((val,id) => <li><a href="${val.link}" target="_blank">${val.name}</a></li>).join("")}
         </ol><br>`)
     },
 }

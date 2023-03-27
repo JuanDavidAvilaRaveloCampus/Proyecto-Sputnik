@@ -1,9 +1,9 @@
 export default{
-    imagen: "../assets/img/images.squarespace-cdn.jpeg",
+    imagen: "../assets/img/9af92b173c78184514bfc394f26e0a07.jpg",
 
     TitleBanner: [
         {
-            title2: "Poema",
+            title2: "LEAGUE OF LEYENDS",
             name: "ddd",
             content: "ddd"
         }
@@ -11,14 +11,14 @@ export default{
 
     ContentBanner: [
         {
-            content: "Todos pensamos en algún momento que la poesia solo son palabras bonitas, pero creo, que hay algo más que eso...",
+            content: "Uno de los juegos más adcitivos y toxicos del mundo.",
         }
     ],
 
     btn: [
         {
-            name:"Continuar...",
-            href:"https://music.apple.com/mx/artist/la-razon-de-todo/1470297098"
+            name:"DESCARGAR...",
+            href:"https://www.leagueoflegends.com/es-mx/"
         }
     ],
 

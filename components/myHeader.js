@@ -1,8 +1,8 @@
 export default{
     title: [
         {
-            name: "¿Por que sí?",
-            href: "#"
+            name: "DE TODO UN POCO",
+            href: "https://www.youtube.com/@UnPocoDeTodoYT"
         }
     ],
     company: [
@@ -19,11 +19,11 @@ export default{
             href: "#"
         },
         {
-            name: "Relaxing",
+            name: "Spotify",
             href: "#"
         },
         {
-            name: "Meditation",
+            name: "Videos",
             href: "#"
         },
     ],
