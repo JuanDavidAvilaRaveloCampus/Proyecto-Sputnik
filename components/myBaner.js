@@ -39,7 +39,7 @@ export default{
     },
     showImage(){
         document.querySelector(".Style-img").style.backgroundImage = `url(${this.imagen})`;
-    },
+    }, 
 
     Button(){
         let plantilla ="";
