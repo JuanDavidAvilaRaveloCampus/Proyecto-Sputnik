@@ -12,8 +12,8 @@ myBaner.listContentBanner();
 myBaner.Button();
 
 myAside.showAside();
-myAside.cards();
-myAside.list();
+/* myAside.cards();
+myAside.list(); */
 
 MyPost.showCard();
 

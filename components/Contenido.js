@@ -10,18 +10,18 @@ export default {
                 },
                 paragraph: '',
                 paragraph_2: '',
-
+                img: ''
             },
             article_2: {
                 title: '',
                 span: ' ',
                 subtitle: '',
                 paragraph: '',
+                img: '',
             },
             article_3: {
                 title: '',
                 paragraph: '',
-                span: ' ',
                 list: {
                     item_1: '',
                     item_2: '',
@@ -152,36 +152,37 @@ export default {
 
     showArticle(){
         document.querySelector('#article_1').insertAdjacentHTML('beforeend',`<h2 class="blog-post-title">${val.article.article_1.title}</h2>
-        <p class="blog-post-meta">${val.article.article_1.date} by <a href="${val.article.article_1.by.href}" target="_blank">${val.article.article_1.by.name}</a></p>
-        <p>${val.paragraph}</p>
+        <p class="blog-post-meta">${val.article.article_1.date} by <a href="${val.article.article_1.by.link}" target="_blank">${val.article.article_1.by.name}</a></p>
+        <p>${val.article.article_1.paragraph}</p>
         <hr>
-        <p>${val.content}</p>
-            <img src="${val.img1}" style ="max-width: 100%;"><br>
-            <h2>${val.blockquote}</h2>
-        <p>${val.reference}</p>
+        <p>${val.atricle.article_1.paragraph2}</p>
+        <img src="${val.article.article_1.img}" style ="max-width: 100%;"><br>
+        <h2>${val.article.article_2.title}</h2>
+        <p>${val.article.article_2.span}</p>
         <blockquote class="blockquote">
-            <p>${val.quote}</p>
+            <p>${val.article.article_2.subtitle}</p>
         </blockquote>
-        <p>${val.additiona}</p>
-        <img src="${val.img2}" style ="max-width: 100%;"><br><br>
-        <h3>${val.title2}</h3>
-        <p>${val.paragraph2}</p>
+        <p>${val.article.article_2.paragraph}</p>
+        <img src="${val.article.article_2.img2}" style ="max-width: 100%;"><br><br>
+        <h3>${val.article.article_3.title}</h3>
+        <p>${val.article.article_3.paragraph}</p>
         <ul>
-            <li>${val.list1}</li>
-            <li>${val.list2}</li>
-            <li>${val.list3} </li>
+            <li>${val.article.article_3.list.item_1}</li>
+            <li>${val.article.article_3.list.item_2}</li>
+            <li>${val.article.article_3.list.item_1} </li>
         </ul>
-        <p>${val.reference2}</p>
+        <p>${val.article.article_3.span}</p>
         <ol>
-            <li>${val.list6}</li>
-            <li>${val.list7}</li>
-            <li>${val.list8}</li>
+            <li>${val.article.article_3.list_2.item_1}</li>
+            <li>${val.article.article_3.list_2.item_2}</li>
+            <li>${val.article.article_3.list_2.item_3}</li>
         </ol>
+        <p>${val.article.article_3.span}</p>
         <dl>
-            <dt>${val.list6}</dt>
-            <dd>2006</dd>
-            <dt>${val.list7}</dt>
-            <dd>2007</dd>
+            <dt>${val.article.article_3.tecnologies.tecnologie_1.title}</dt>
+            <dd>${val.article.article_3.tecnologies.tecnologie_1.paragraph}</dd>
+            <dt>${val.article.article_3.tecnologies.tecnologie_2.title}</dt>
+            <dd>${val.article.article_3.tecnologies.tecnologie_2.paragraph}</dd>
             <dt>${val.list8}</dt>
             <dd>2007/2008</dd>
         </dl>

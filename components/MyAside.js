@@ -55,11 +55,11 @@ export default {
         });
         document.querySelector("#nav").insertAdjacentHTML("beforeend", data.join(""))
     },
-    cards(p1) {
+    cards(p2) {
         return `
-        <div class="p-4 mb-3 bg-black rounded ">
-                <h4 class="fst-italic">${p1.title}</h4>
-                <p class="mb-0">${p1.paragranph}</p>
+            <div class="p-4 mb-3 bg-black rounded ">
+                <h4 class="fst-italic">${p2.title}</h4>
+                <p class="mb-0">${p2.paragranph}</p>
             </div>` ;
     },
     list(p1) {
