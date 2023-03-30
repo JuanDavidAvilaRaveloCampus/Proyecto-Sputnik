@@ -1,6 +1,5 @@
 export default {
-    article: [
-        {
+    article: {
             article_1: {
                 title: 'From the Firehose',
                 date: 'Sample blog post',
@@ -73,206 +72,146 @@ export default {
                         span : 'Abbreviations, like',
                         abbr : 'HTML',
                         span_2 : 'should use',
-                        code : '',
-                        span_3 : '',
+                        code : 'title',
+                        span_3 : 'attribute for the full phrase.',
                     },
+                    
                     item_4: {
-                        strong: '',
-                        use : '',
-                        code : '',
+                        span : 'Citations, like',
+                        cite: '— Mark Otto',
+                        span_2 : 'should use',
+                        code : '&lt;cite&gt;',
                     },
                     item_5: {
-                        strong: '',
-                        use : '',
-                        code : '',
+                        del: 'Deleted',
+                        span : 'text should use',
+                        code : '&lt;del&gt;',
+                        span_2 : 'and',
+                        ins : 'inserted',
+                        span_3 : 'text should use',
+                        code_2 : '&lt;ins&gt;',
                     },
                     item_6: {
-                        strong: '',
-                        use : '',
-                        code : '',
+                        span : 'Superscript',
+                        sup : 'text',
+                        span_2 : 'uses',
+                        code : '&lt;sup&gt;',
+                        span_3 : 'and subscript ',
+                        sup_2 : 'text',
+                        span_4 : 'uses',
+                        code_2 : '&lt;sub&gt',
+                        
+                        
+                        ins : '',
+
                     },
                 },
                 span: '',
             },
             article_5: {
-                title: '',
-                paragraph: '',
+                title: 'Heading',
+                paragraph: "This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.",
+                title_2: "Sub-heading",
+                paragraph_2: "This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.",
+                pre : "Example code block",
+                paragraph_3 : "This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.",
             },
-            article_6: {
-                title: '',
-                paragraph: '',
-                span: '',
-                paragraph_2: '',
-            }
-
-        }
-    ],
-    article_2: [
-        {
-            article_1 : {
-                title: '',
-                date: {
-                    month: '',
-                    day: '',
-                    year: ''
-                },
-                link: '',
-                paragraph: '',
-                paragraph_2: '',
-                paragraph_3: '',
-            },
-            article_2: {
-                title: '',
-                span: '',
-                table : {
-                    title: '',
-                    span : '',
-                    tabla : {
-                        filas_header : {
-                            title: '',
-                            title_2: '',
-                            title_3: ''
-                        },
-                        filas_1 : {
-                            title: '',
-                            title_2: '',
-                            title_3: ''
-                        },
-                        filas_2 : {
-                            title: '',
-                            title_2: '',
-                            title_3: ''
-                        },
-                        filas_3 : {
-                            title: '',
-                            title_2: '',
-                            title_3: ''
-                        },
-                        filas_total : {
-                            title: '',
-                            title_2: '',
-                            title_3: ''
-                        }
-                    },
-                },
-                paragraph : ''
-            },
-            article_3 : {
-                title: '',
-                date : {
-                    month: '',
-                    day: '',
-                    year: ''
-                },
-                link: '',
-                paragraph: '',
-                span: '',
-                list : {
-                    item_1: '',
-                    item_2: '',
-                    item_3: '',
-                },
-                paragraph : ''
-            },
-            button : {
-                bton_1 : '',
-                bton_2 : '',
-            }
-        },
-    ],
-
+    },
     showArticle(){
-        document.querySelector('#article_1').insertAdjacentHTML('beforeend',`<h2 class="blog-post-title">${val.article.article_1.title}</h2>
-        <p class="blog-post-meta">${val.article.article_1.by.name}<a href="${val.article.article_1.by.href}">${val.article.article_1.by.link}</a>
+        document.querySelector('#article_1').insertAdjacentHTML('beforeend',`<h2 class="blog-post-title">${this.article.article_1.title}</h2>
+        <p class="blog-post-meta">${this.article.article_1.by.name}<a href="${this.article.article_1.by.href}">${this.article.article_1.by.link}</a>
         </p>
-        <p>${val.article.article_1.paragraph}</p>
+        <p>${this.article.article_1.paragraph}</p>
         <hr>
-        <p>${val.atricle.article_1.paragraph2}</p>
-        <img src="${val.article.article_1.img}" style ="max-width: 100%;"><br>
+        <p>${this.article.article_1.paragraph2}</p>
+        <img src="${this.article.article_1.img}" style ="max-width: 100%;"><br>
 
         
-        <h2>${val.article.article_2.title}</h2>
-        <p>${val.article.article_2.span}</p>
+        <h2>${this.article.article_2.title}</h2>
+        <p>${this.article.article_2.span}</p>
         <blockquote class="blockquote">
-            <p>${val.article.article_2.subtitle}</p>
+            <p>${this.article.article_2.subtitle}</p>
         </blockquote>
-        <p>${val.article.article_2.paragraph}</p>
-        <img src="${val.article.article_2.img2}" style ="max-width: 100%;"><br><br>
+        <p>${this.article.article_2.paragraph}</p>
+        <img src="${this.article.article_2.img2}" style ="max-width: 100%;"><br><br>
 
 
-        <h3>${val.article.article_3.title}</h3>
-        <p>${val.article.article_3.paragraph}</p>
+        <h3>${this.article.article_3.title}</h3>
+        <p>${this.article.article_3.paragraph}</p>
         <ul>
-            <li>${val.article.article_3.list.item_1}</li>
-            <li>${val.article.article_3.list.item_2}</li>
-            <li>${val.article.article_3.list.item_1} </li>
+            <li>${this.article.article_3.list.item_1}</li>
+            <li>${this.article.article_3.list.item_2}</li>
+            <li>${this.article.article_3.list.item_1} </li>
         </ul>
-        <p>${val.article.article_3.span}</p>
+        <p>${this.article.article_3.span}</p>
         <ol>
-            <li>${val.article.article_3.list_2.item_1}</li>
-            <li>${val.article.article_3.list_2.item_2}</li>
-            <li>${val.article.article_3.list_2.item_3}</li>
+            <li>${this.article.article_3.list_2.item_1}</li>
+            <li>${this.article.article_3.list_2.item_2}</li>
+            <li>${this.article.article_3.list_2.item_3}</li>
         </ol>
-        <p>${val.article.article_3.span}</p>
+        <p>${this.article.article_3.span}</p>
         <dl>
-            <dt>${val.article.article_3.tecnologies.tecnologie_1.title}</dt>
-            <dd>${val.article.article_3.tecnologies.tecnologie_1.paragraph}</dd>
-            <dt>${val.article.article_3.tecnologies.tecnologie_2.title}</dt>
-            <dd>${val.article.article_3.tecnologies.tecnologie_2.paragraph}</dd>
-            <dd>${val.article.article_3.tecnologies.tecnologie_3.title}</dd>
-            <dd>${val.article.article_3.tecnologies.tecnologie_3.paragraph}</dd>
+            <dt>${this.article.article_3.tecnologies.tecnologie_1.title}</dt>
+            <dd>${this.article.article_3.tecnologies.tecnologie_1.paragraph}</dd>
+            <dt>${this.article.article_3.tecnologies.tecnologie_2.title}</dt>
+            <dd>${this.article.article_3.tecnologies.tecnologie_2.paragraph}</dd>
+            <dd>${this.article.article_3.tecnologies.tecnologie_3.title}</dd>
+            <dd>${this.article.article_3.tecnologies.tecnologie_3.paragraph}</dd>
         </dl>
-        <img src="${val.article.article_3.img}" style ="max-width: 100%;"><br>
+        <img src="${this.article.article_3.img}" style ="max-width: 100%;"><br>
 
 
-        <h2>${val.article.article_4.title}</h2>
-        <p>${val.article.article_4.paragraph}
-            < href=${val.article.article_4.link.link}>${val.article.article_4.link.name}</a>.
+        <h2>${this.article.article_4.title}</h2>
+        <p>${this.article.article_4.paragraph}
+            < href=${this.article.article_4.link.link}>${this.article.article_4.link.name}</a>.
         </p>
         <ul>
             <li>
-                <strong>${val.article.article_4.list.item_1.strong}</strong>
-                ${val.article.article_4.list.item_1.use}
-                <code class="language-plaintext highlighter-rouge">${val.article.article_4.list.item_1.code}</code>
+                <strong>${this.article.article_4.list.item_1.strong}</strong>
+                ${this.article.article_4.list.item_1.use}
+                <code class="language-plaintext highlighter-rouge">${this.article.article_4.list.item_1.code}</code>
             </li>
             <li>
-                <em>${val.article.article_4.list.item_2.em}</em>            
-                ${val.article.article_4.list.item_2.use}
-                <code class="language-plaintext highlighter-rouge">${val.article.article_4.list.item_2.code}</code>
+                <em>${this.article.article_4.list.item_2.em}</em>            
+                ${this.article.article_4.list.item_2.use}
+                <code class="language-plaintext highlighter-rouge">${this.article.article_4.list.item_2.code}</code>
             </li>
             <li>
-                ${val.article.article_4.list.item_3.span}
-                <abbr title="HyperText Markup Langage">${val.article.article_4.list.item_3.abbr}</abbr>  
-                ${val.article.article_4.list.list_3.span_2}          
-                <code class="language-plaintext highlighter-rouge">${val.article.article_4.list.item_3.code}</code>
+                ${this.article.article_4.list.item_3.span}
+                <abbr title="HyperText Markup Langage">${this.article.article_4.list.abbr}</abbr>  
+                ${this.article.article_4.list.span_2}          
+                <code class="language-plaintext highlighter-rouge">${this.article.article_4.list.code}</code>
+                ${this.article.article_4.list.span_3}
             </li>
             <li>
-                ${val.article.article_4.list.item_4.use}
-                <strong>${val.article.article_4.list.item_4.strong}</strong>            
-                <code>${val.article.article_4.list.item_4.code}</code>
+                <del>${this.article.article_4.list.item_5.del}</del> 
+                ${this.article.article_4.list.item_5.span}
+                <code class="language-plaintext highlighter-rouge">${this.article.article_4.list.item_5.code}</code>
+                ${this.article.article_4.list.item_5.span_2} 
+                <ins>${this.article.article_4.list.item_5.ins}</ins> 
+                ${this.article.article_4.list.item_5.span_3}
+                <code class="language-plaintext highlighter-rouge">${this.article.article_4.list.item_5.code_2}</code>.
             </li>
             <li>
-                ${val.article.article_4.list.item_5.use}
-                <strong>${val.article.article_4.list.item_5.strong}</strong>            
-                <code>${val.article.article_4.list.item_5.code}</code>
-            </li>
-            <li>
-                ${val.article.article_4.list.item_6.use}
-                <strong>${val.article.article_4.list.item_6.strong}</strong>
-                <code>${val.article.article_4.list.item_6.code}</code>
+                ${this.article.article_4.list.item_6.span} 
+                <sup>${this.article.article_4.list.item_6.sup}</sup>
+                ${this.article.article_4.list.item_6.span_2}
+                <code class="language-plaintext highlighter-rouge">${this.article.article_4.list.item_6.code}</code>
+                ${this.article.article_4.list.item_6.span_3}
+                <sub>${this.article.article_4.list.item_6.sup_2}</sub>
+                ${this.article.article_4.list.item_6.span_4}
+                <code class="language-plaintext highlighter-rouge">${this.article.article_4.list.item_6.code}</code>.
             </li>
         </ul>
-        <p>${val.article.article_4.span}</p>
+        <p>${this.article.article_4.span}</p>
 
 
-        <h2>${val.article.article_5.title}</h2>
-        <p>${val.article.article_5.paragraph}</p>
-
-
-        <h3>${val.article.article_6.title}</h3>
-        <p>${val.article.article.paragraph}</p>
-        <pre><code>${val.article.article_6.span}</code></pre>
-        <p>${val.article.article_6.paragraph2}</p>
+        <h2>${this.article.article_5.title}</h2>
+        <p>${this.article.article_5.paragraph}</p>
+        <h3>${this.article.article_5.title_2}</h3>
+        <p>${this.article.article_5.paragraph_2}</p>
+        <pre><code>${this.article.article_5.pre}</code></pre>
+        <p>${this.article.article_5.paragraph_3}</p>
     </article>`
     )},
 };

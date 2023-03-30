@@ -1,5 +1,5 @@
 export default {
-    post : [        
+    post : [
         {
             article: "AATROX",
             title : "La espada Darkin",
@@ -8,7 +8,7 @@ export default {
             autor : "Classick",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_20.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/aatrox/"
             },
         },
@@ -20,7 +20,7 @@ export default {
             autor : "Rito",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_6.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/mordekaiser/"
             },
         },
@@ -32,31 +32,31 @@ export default {
             autor : "Rito",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_43.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/darius/"
             },
         },
         {
             article: "ZOE",
-            title : "El Aspecto del Crepusculo",
+            title : "Aspecto del Crepusculo",
             date : "21/11/2017",
             paragraph : "Como la personificación de las travesuras, la imaginación y el cambio, Zoe actúa como la mensajera cósmica de Targón y anuncia grandes acontecimientos que pueden alterar mundos. Su mera presencia distorsiona las matemáticas arcanas que rigen las...",
             autor : "Leonardo Cositorto",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zoe_22.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/zoe/"
             },
         },
         {
             article: "AHRI",
-            title : "La vastaya de nueve colas",
+            title : "Vastaya de nueve colas",
             date : "1843",
             paragraph : "Ahri es una vastaya de aspecto vulpino conectada de forma innata a la magia del reino de los espíritus; puede manipular las emociones de sus presas y consumir su esencia, por lo que recibe fragmentos de su memoria y conocimiento de cada alma que consume...",
             autor : "Charles Dickens ",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_27.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/ahri/"
             },
         },
@@ -68,7 +68,7 @@ export default {
             autor : "Riot Cashmiir",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jayce_15.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/jayce/"
             },
         },
@@ -80,7 +80,7 @@ export default {
             autor : "Charles Dickens ",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yuumi_1.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/yummi/"
             },
         },
@@ -92,7 +92,7 @@ export default {
             autor : "Charles Dickens ",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Riven_44.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/riven/"
             },
         },
@@ -104,7 +104,7 @@ export default {
             autor : "Charles Dickens ",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rakan_5.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/rakan/"
             },
         },
@@ -116,27 +116,28 @@ export default {
             autor : "Charles Dickens ",
             img : "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Xayah_28.jpg",
             btn : {
-                name : "Ver",
+                name : "...Ver mas",
                 href : "https://www.leagueoflegends.com/es-mx/champions/xayah/"
             },
         },
     ],
 
     showCard(){
+        // let parrafo = this.post.paragraph;
         this.post.forEach((val,id) => {
             document.querySelector("#targets").insertAdjacentHTML('beforeend',`
             <div class="col-md-6">
-                <div id="chover" class=" h-auto g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">${val.article}</strong>
-                        <h3 class="mb-0">${val.title}</h3>
-                        <div class="mb-1 text-muted">${val.date}</div>
-                        <p class="card-text mb-auto">${val.paragraph}</p>
-                        <a href="${val.btn.href}" target="_blank" class="stretched-link">${val.btn.name}</a>
-                        <cite>${val.autor}</cite>
-                        <div class="col-auto d-none d-lg-block">
-                            <img src="${val.img}" class="img_book img-thumbnail">
-                        </div>
+                <div id="chover" class=" h-5 g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-3 d-flex position-static">
+                        <div class='flex-colum'>
+                            <strong class="d-inline-block mb-2 text-primary">${val.article}</strong>
+                            <h3 class="mb-0">${val.title}</h3>
+                            <div class="mb-1 text-muted">${val.date}</div>
+                            <p class="card-text mb-auto">${val.paragraph.split(' ').slice(0, 24).join(' ')} <a href="${val.btn.href}" target="_blank" class="stretched-link">${val.btn.name}</a></p>
+                            
+                        </div> 
+                        <div class="col-auto d-none w-50 mt-3 d-lg-block">
+                            <img src="${val.img}" class="img_book  img-thumbnail">
                         </div>
                 </div>
             </div>`);
